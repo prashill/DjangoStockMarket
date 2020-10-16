@@ -1,0 +1,24 @@
+{%extends 'base.html' %}
+{%block content%}
+
+
+	<h1>Delete Stock</h1>
+	<br>
+	
+
+   {% if ticker %}
+   {% for item in ticker %}
+    <button type="button" class="btn btn-dark"><a href="{% url 'delete' item.id %}" style="color: white;">Delete {{item }}</a></button> &nbsp &nbsp &nbsp &nbsp
+    
+    {% endfor %}
+	{% else %}
+	You don't have any stocks...
+	{% endif %}
+  
+
+	
+		
+	
+			<br>
+		
+{% endblock %}
